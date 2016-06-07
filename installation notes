@@ -1,0 +1,62 @@
+
+
+libusb for 10.11 !!!!!
+http://www.ellert.se/PKGS/libusb-2015-10-21/
+
+homebrew package wasn't working.. this did work
+
+------
+rtcmix
+
+brew install bison
+    LDFLAGS:  -L/usr/local/opt/bison/lib
+
+brew install flex
+    LDFLAGS:  -L/usr/local/opt/flex/lib
+    CPPFLAGS: -I/usr/local/opt/flex/include
+
+
+----------
+goal: https://ccrma.stanford.edu/realsimple/vir_flute/vir_flute.html
+
+overview: https://ccrma.stanford.edu/realsimple/stkforpd/
+
+install SDK
+https://ccrma.stanford.edu/software/stk/download.html
+
+readme instructions worked fine
+
+install flext:
+https://github.com/grrrr/flext
+
+git clone
+
+./bootstrap.sh
+./configure --enable-system=pd --with-sdkdir=/Applications/Pd-0.46-7-64bit.app/Contents/Resources/src
+make
+(got some warnings below)
+make install
+
+individual .cpp files need this include
+#include </Users/jmej/Library/Pd/flext/source/flstk.h>
+
+
+getting this error: In file included from /Users/jmej/Library/Pd/flext/source/flext.h:32:
+/Users/jmej/Library/Pd/flext/source/flprefix.h:107:6: error: "System must be defined by either
+      FLEXT_SYS_MAX or FLEXT_SYS_PD"
+
+from a the Clarinet.cpp file I modified for flext based on an example I found
+
+
+got the following warnings during flext make:
+4 warnings generated.
+libtool: compile:  g++ -DPACKAGE_NAME=\"flext\" -DPACKAGE_TARNAME=\"flext\" -DPACKAGE_VERSION=\"0.6.0\" "-DPACKAGE_STRING=\"flext 0.6.0\"" -DPACKAGE_BUGREPORT=\"gr@grrrr.org\" -DPACKAGE_URL=\"\" -DPACKAGE=\"flext\" -DVERSION=\"0.6.0\" -DFLEXT_SYS=2 -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -DFLEXT_DEBUG -g -I/Applications/Pd-0.46-7-64bit.app/Contents/Resources/src -DFLEXT_SHARED -MT libflext_pd_d_la-flmap.lo -MD -MP -MF .deps/libflext_pd_d_la-flmap.Tpo -c flmap.cpp -o libflext_pd_d_la-flmap.o >/dev/null 2>&1
+mv -f .deps/libflext_pd_d_la-flmap.Tpo .deps/libflext_pd_d_la-flmap.Plo
+/bin/sh ../libtool  --tag=CXX   --mode=link g++ -DFLEXT_DEBUG -g -I/Applications/Pd-0.46-7-64bit.app/Contents/Resources/src -DFLEXT_SHARED  -flat_namespace -undefined dynamic_lookup   -framework ApplicationServices -framework Accelerate   -o libflext-pd_d.la -rpath /usr/local/lib libflext_pd_d_la-flbase.lo libflext_pd_d_la-flext.lo libflext_pd_d_la-flbuf.lo libflext_pd_d_la-fldsp.lo libflext_pd_d_la-fllib.lo libflext_pd_d_la-flxlet.lo libflext_pd_d_la-flattr.lo libflext_pd_d_la-flattr_ed.lo libflext_pd_d_la-flsupport.lo libflext_pd_d_la-flutil.lo libflext_pd_d_la-flthr.lo libflext_pd_d_la-fltimer.lo libflext_pd_d_la-flsimd.lo libflext_pd_d_la-flout.lo libflext_pd_d_la-flatom.lo libflext_pd_d_la-flatom_pr.lo libflext_pd_d_la-flatom_part.lo libflext_pd_d_la-flitem.lo libflext_pd_d_la-flmeth.lo libflext_pd_d_la-flmsg.lo libflext_pd_d_la-flproxy.lo libflext_pd_d_la-flqueue.lo libflext_pd_d_la-flbind.lo libflext_pd_d_la-flmap.lo    
+libtool: link: g++ -dynamiclib -Wl,-undefined -Wl,dynamic_lookup -o .libs/libflext-pd_d.0.dylib  .libs/libflext_pd_d_la-flbase.o .libs/libflext_pd_d_la-flext.o .libs/libflext_pd_d_la-flbuf.o .libs/libflext_pd_d_la-fldsp.o .libs/libflext_pd_d_la-fllib.o .libs/libflext_pd_d_la-flxlet.o .libs/libflext_pd_d_la-flattr.o .libs/libflext_pd_d_la-flattr_ed.o .libs/libflext_pd_d_la-flsupport.o .libs/libflext_pd_d_la-flutil.o .libs/libflext_pd_d_la-flthr.o .libs/libflext_pd_d_la-fltimer.o .libs/libflext_pd_d_la-flsimd.o .libs/libflext_pd_d_la-flout.o .libs/libflext_pd_d_la-flatom.o .libs/libflext_pd_d_la-flatom_pr.o .libs/libflext_pd_d_la-flatom_part.o .libs/libflext_pd_d_la-flitem.o .libs/libflext_pd_d_la-flmeth.o .libs/libflext_pd_d_la-flmsg.o .libs/libflext_pd_d_la-flproxy.o .libs/libflext_pd_d_la-flqueue.o .libs/libflext_pd_d_la-flbind.o .libs/libflext_pd_d_la-flmap.o   -framework ApplicationServices -framework Accelerate  -g   -framework ApplicationServices -framework Accelerate -install_name  /usr/local/lib/libflext-pd_d.0.dylib -compatibility_version 1 -current_version 1.0 -Wl,-single_module
+libtool: link: (cd ".libs" && rm -f "libflext-pd_d.dylib" && ln -s "libflext-pd_d.0.dylib" "libflext-pd_d.dylib")
+libtool: link: ar cru .libs/libflext-pd_d.a  libflext_pd_d_la-flbase.o libflext_pd_d_la-flext.o libflext_pd_d_la-flbuf.o libflext_pd_d_la-fldsp.o libflext_pd_d_la-fllib.o libflext_pd_d_la-flxlet.o libflext_pd_d_la-flattr.o libflext_pd_d_la-flattr_ed.o libflext_pd_d_la-flsupport.o libflext_pd_d_la-flutil.o libflext_pd_d_la-flthr.o libflext_pd_d_la-fltimer.o libflext_pd_d_la-flsimd.o libflext_pd_d_la-flout.o libflext_pd_d_la-flatom.o libflext_pd_d_la-flatom_pr.o libflext_pd_d_la-flatom_part.o libflext_pd_d_la-flitem.o libflext_pd_d_la-flmeth.o libflext_pd_d_la-flmsg.o libflext_pd_d_la-flproxy.o libflext_pd_d_la-flqueue.o libflext_pd_d_la-flbind.o libflext_pd_d_la-flmap.o
+libtool: link: ranlib .libs/libflext-pd_d.a
+libtool: link: ( cd ".libs" && rm -f "libflext-pd_d.la" && ln -s "../libflext-pd_d.la" "libflext-pd_d.la" )
+make[1]: Nothing to be done for `all-am'.
+

@@ -1,0 +1,183 @@
+#N canvas 93 95 1105 743 10;
+#X obj 321 355 uDMX;
+#X obj 295 -246 inlet;
+#X obj 321 69 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X floatatom 350 251 5 0 0 0 - - -, f 5;
+#X obj 321 205 t f b;
+#X floatatom 285 240 5 0 0 0 - - -, f 5;
+#X msg 301 294 \$1 \$2;
+#X obj 292 271 pack f f;
+#X obj 279 335 print;
+#X text 382 250 channel #;
+#X text 348 148 intensity;
+#N canvas 0 22 792 605 turn_on_all_lights 0;
+#X obj 246 211 f;
+#X obj 289 211 + 1;
+#X floatatom 246 348 5 0 0 0 - - -, f 5;
+#X obj 214 150 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 240 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 240 108 t b b;
+#X msg 304 163 1;
+#X obj 268 242 sel 512;
+#X msg 269 268 0;
+#X msg 240 131 1;
+#X obj 240 172 metro 10;
+#X obj 247 321 mod 513;
+#X obj 247 407 outlet;
+#X obj 229 40 inlet;
+#X text 360 68 gets a bang and sends out ctrl 0 messages through all
+512 channels;
+#X text 359 16 sets all dmx channels to 0;
+#X text 358 114 properly formated for ctlout;
+#X msg 247 368 127 \$1;
+#X connect 0 0 1 0;
+#X connect 0 0 11 0;
+#X connect 1 0 0 1;
+#X connect 2 0 17 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 5 1 6 0;
+#X connect 6 0 1 1;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 0 0;
+#X connect 11 0 2 0;
+#X connect 11 0 7 0;
+#X connect 13 0 4 0;
+#X connect 17 0 12 0;
+#X restore 468 -81 pd turn_on_all_lights;
+#X obj 470 -110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 296 -217 unpack;
+#N canvas 0 22 792 605 turn_off_all_lights 0;
+#X obj 246 211 f;
+#X obj 289 211 + 1;
+#X floatatom 246 348 5 0 0 0 - - -, f 5;
+#X obj 214 150 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 240 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 240 108 t b b;
+#X msg 304 163 1;
+#X obj 268 242 sel 512;
+#X msg 269 268 0;
+#X msg 240 131 1;
+#X obj 240 172 metro 10;
+#X obj 247 321 mod 513;
+#X msg 247 368 0 \$1;
+#X obj 247 407 outlet;
+#X obj 229 40 inlet;
+#X text 360 68 gets a bang and sends out ctrl 0 messages through all
+512 channels;
+#X text 359 16 sets all dmx channels to 0;
+#X text 358 114 properly formated for ctlout;
+#X connect 0 0 1 0;
+#X connect 0 0 11 0;
+#X connect 1 0 0 1;
+#X connect 2 0 12 0;
+#X connect 3 0 10 0;
+#X connect 4 0 5 0;
+#X connect 5 0 9 0;
+#X connect 5 1 6 0;
+#X connect 6 0 1 1;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 0 0;
+#X connect 11 0 2 0;
+#X connect 11 0 7 0;
+#X connect 12 0 13 0;
+#X connect 14 0 4 0;
+#X restore 475 -19 pd turn_off_all_lights;
+#X obj 475 -43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 491 31 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 518 110 intensity;
+#X obj 599 34 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 625 107 intensity;
+#X obj 711 28 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 738 107 intensity;
+#X obj 818 25 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 845 104 intensity;
+#X msg 593 186 \$1 5;
+#X msg 713 187 \$1 7;
+#X obj 493 233 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 520 312 intensity;
+#X obj 601 236 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 627 309 intensity;
+#X obj 713 230 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 740 309 intensity;
+#X obj 820 227 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 847 306 intensity;
+#X msg 493 387 \$1 38;
+#X msg 595 388 \$1 45;
+#X msg 715 389 \$1 46;
+#X msg 817 390 \$1 47;
+#X obj 648 453 send stack;
+#X obj 370 -223 r stack;
+#X msg 491 185 \$1 4;
+#X obj 730 -103 hsl 128 15 0 255 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X msg 815 188 \$1 8;
+#X obj 746 -160 line;
+#X msg 736 -200 0 2000;
+#X msg 748 -230 255 2000;
+#X obj 536 -185 delay;
+#X connect 1 0 13 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 1;
+#X connect 3 0 7 1;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 4 1 3 0;
+#X connect 6 0 0 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 11 0 13 0;
+#X connect 12 0 11 0;
+#X connect 13 0 2 0;
+#X connect 13 1 3 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 40 0;
+#X connect 18 0 24 0;
+#X connect 20 0 25 0;
+#X connect 22 0 42 0;
+#X connect 24 0 38 0;
+#X connect 25 0 38 0;
+#X connect 26 0 34 0;
+#X connect 28 0 35 0;
+#X connect 30 0 36 0;
+#X connect 32 0 37 0;
+#X connect 34 0 38 0;
+#X connect 35 0 38 0;
+#X connect 36 0 38 0;
+#X connect 37 0 38 0;
+#X connect 39 0 13 0;
+#X connect 40 0 38 0;
+#X connect 41 0 16 0;
+#X connect 41 0 18 0;
+#X connect 41 0 20 0;
+#X connect 41 0 22 0;
+#X connect 41 0 26 0;
+#X connect 41 0 28 0;
+#X connect 41 0 30 0;
+#X connect 41 0 32 0;
+#X connect 42 0 38 0;
+#X connect 43 0 41 0;
+#X connect 44 0 43 0;
+#X connect 45 0 43 0;
+#X coords 0 -1 1 1 300 150 1 110 -130;
