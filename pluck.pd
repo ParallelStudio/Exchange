@@ -462,6 +462,8 @@ tadada;
 #X text 975 537 single light test;
 #X obj 1034 441 clone 127 note-in-clone;
 #X text 1010 416 sends envelopes from midi notes;
+#X text 881 472 there are only 18 sensors - so clusters of 4 lights
+need to be grouped together with one sound/note;
 #X connect 0 0 115 0;
 #X connect 0 0 116 0;
 #X connect 2 0 5 0;
