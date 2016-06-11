@@ -1,0 +1,4 @@
+#N canvas 0 22 450 300 10;
+#X obj 159 106 tabwrite lights;
+#X obj 153 69 inlet;
+#X msg 334 118 \; lights resize 512;
