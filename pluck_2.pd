@@ -1,4 +1,4 @@
-#N canvas 84 61 1548 811 10;
+#N canvas 51 174 1548 811 10;
 #N canvas 715 226 450 300 body 0;
 #X obj 150 39 inlet~;
 #X obj 162 212 outlet~;
@@ -20,11 +20,11 @@
 #X restore 252 580 pd body filter;
 #X obj 249 705 dac~;
 #X obj 277 378 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 11800 1;
+-1 -1 9800 1;
 #X obj 311 379 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10700 1;
+-1 -1 6900 1;
 #X obj 345 379 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7600 1;
+-1 -1 11100 1;
 #X obj 277 519 mtof;
 #X obj 311 519 mtof;
 #X obj 344 519 mtof;
@@ -52,11 +52,11 @@
 #X connect 7 0 4 1;
 #X restore 588 604 pd body filter2;
 #X obj 685 388 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 9200 1;
 #X obj 719 389 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 12400 1;
 #X obj 753 389 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12500 1;
+-1 -1 11400 1;
 #X obj 685 529 mtof;
 #X obj 719 529 mtof;
 #X obj 752 529 mtof;
@@ -64,7 +64,7 @@
 #X obj 680 560 nozip-ctrl;
 #X obj 819 560 nozip-ctrl;
 #X obj 627 654 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X floatatom 640 682 5 0 0 0 - - -, f 5;
 #X obj 579 679 *~ 0.8;
 #X obj 250 610 *~ 1;
@@ -88,8 +88,8 @@
 #X obj 11 28 s notein;
 #X obj 181 -15 inlet;
 #X obj 174 20 s ctlin;
-#X obj 206 131 clone 18 karplus_strong_clone;
-#X obj 542 211 clone 18 steampipe;
+#X obj 206 131 clone 127 karplus_strong_clone;
+#X obj 528 467 steampipe;
 #X connect 0 0 25 0;
 #X connect 2 0 5 0;
 #X connect 3 0 6 0;
@@ -132,4 +132,3 @@
 #X connect 42 0 43 0;
 #X connect 44 0 45 0;
 #X connect 46 0 0 0;
-#X connect 47 0 12 0;
