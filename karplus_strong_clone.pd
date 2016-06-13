@@ -1,6 +1,6 @@
 #N canvas 613 23 997 565 10;
 #X obj 407 -1 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X text 432 30 string excitation;
 #X obj 408 -73 r ctlin;
 #X obj 407 -52 route 9;
@@ -94,6 +94,8 @@ b5(71):15 c6(72):18;
 #X msg 724 424 52;
 #X msg 762 422 62;
 #X msg 803 421 72;
+#X obj 326 -55 loadbang;
+#X msg 338 -25 120;
 #X connect 0 0 5 2;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
@@ -195,3 +197,5 @@ b5(71):15 c6(72):18;
 #X connect 88 0 66 0;
 #X connect 89 0 66 0;
 #X connect 90 0 66 0;
+#X connect 91 0 92 0;
+#X connect 92 0 0 0;

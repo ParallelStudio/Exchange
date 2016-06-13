@@ -1,0 +1,64 @@
+#N canvas 715 82 1015 613 10;
+#X obj 114 119 bng 30 250 50 0 15 empty all_on 35 15 0 10 -257985 -1
+-1;
+#X obj 113 165 bng 30 250 50 0 empty empty all_off 35 15 0 10 -99865
+-1 -1;
+#X obj 8 -100 inlet;
+#X text 691 237 framerate;
+#X obj 255 109 tgl 30 0 empty empty draw_frames -30 40 0 10 -260097
+-1 -1 1 1;
+#X obj 8 -70 unpack f f;
+#X obj 65 -23 * 1;
+#X obj 205 181 vsl 25 110 0 1 0 0 empty empty max_brightness 0 -9 0
+10 -260097 -1 -1 10900 1;
+#X obj 262 45 loadbang;
+#X msg 262 68 1;
+#X obj 627 316 outlet;
+#X text 676 316 sends messages for uDMX external;
+#X obj 413 108 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 413 246 int;
+#X msg 413 268 const \$1;
+#X msg 341 70 0;
+#X msg 386 68 127;
+#X msg 440 64 255;
+#X obj 413 291 s \$0-all;
+#X obj 570 21 r \$0-all;
+#X obj 65 -44 int;
+#X text 278 -89 fills a table with 512 values for reading back full
+DMX frames;
+#X obj 8 75 array set \$0-lights 0;
+#X obj 627 273 array get \$0-lights 0 -1;
+#X obj 128 -156 vsl 15 128 0 255 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 127 -12 int;
+#X floatatom 166 -7 5 0 0 0 - - -, f 5;
+#X text 216 -8 channel Nr. 0 - 511;
+#X obj 570 51 array define \$0-lights 180;
+#X obj 660 383 print;
+#X obj 626 235 metro 25;
+#X connect 0 0 17 0;
+#X connect 1 0 15 0;
+#X connect 2 0 5 0;
+#X connect 4 0 30 0;
+#X connect 5 0 22 1;
+#X connect 5 1 20 0;
+#X connect 6 0 22 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 9 0 4 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 18 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 0;
+#X connect 19 0 28 0;
+#X connect 20 0 6 0;
+#X connect 23 0 10 0;
+#X connect 24 0 25 0;
+#X connect 25 0 22 0;
+#X connect 26 0 22 1;
+#X connect 30 0 23 0;
+#X coords 0 -1 1 1 200 200 1 100 100;
