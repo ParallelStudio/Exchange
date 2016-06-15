@@ -1,4 +1,4 @@
-#N canvas 0 23 1486 784 10;
+#N canvas 107 85 1565 938 10;
 #X obj 10 510 inlet;
 #X obj 130 510 r \$0-read;
 #X obj 130 540 faust-control \$0;
@@ -10,16 +10,16 @@
 #X obj 130 660 outlet~;
 #X obj 10 660 outlet;
 #X obj 10 30 nbx 5 14 20 20000 0 0 \$0-Flute/Basic-Parameters/freq
-\$0-Flute/Basic-Parameters/freq freq 0 -6 0 10 -262144 -1 -1 130.813
+\$0-Flute/Basic-Parameters/freq freq 0 -6 0 10 -262144 -1 -1 65.4064
 256;
 #X obj 85 30 nbx 5 14 0 1 0 0 \$0-Flute/Basic-Parameters/gain \$0-Flute/Basic-Parameters/gain
 gain 0 -6 0 10 -262144 -1 -1 1 256;
 #X obj 10 60 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Attack
 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Attack
-Glob-Env-Attack -2 -6 0 10 -262144 -1 -1 0 1;
+Glob-Env-Attack -2 -6 0 10 -262144 -1 -1 6350 1;
 #X obj 160 60 nbx 5 14 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Attack
 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Attack
-empty 0 -6 0 10 -262144 -1 -1 0 256;
+empty 0 -6 0 10 -262144 -1 -1 1 256;
 #X obj 10 90 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Release
 \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Release
 Glob-Env-Release -2 -6 0 10 -262144 -1 -1 12700 1;
@@ -28,10 +28,10 @@ Glob-Env-Release -2 -6 0 10 -262144 -1 -1 12700 1;
 empty 0 -6 0 10 -262144 -1 -1 2 256;
 #X obj 235 60 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
-Press-Env-Attack -2 -6 0 10 -262144 -1 -1 317 1;
+Press-Env-Attack -2 -6 0 10 -262144 -1 -1 5715 1;
 #X obj 385 60 nbx 5 14 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
-empty 0 -6 0 10 -262144 -1 -1 0.05 256;
+empty 0 -6 0 10 -262144 -1 -1 0.9 256;
 #X obj 235 90 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
 \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
 Press-Env-Decay -2 -6 0 10 -262144 -1 -1 1270 1;
@@ -49,34 +49,34 @@ empty 0 -6 0 10 -262144 -1 -1 1 256;
 Pressure-Env 0 -6 0 10 -262144 -1 -1 1 1;
 #X obj 460 60 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack Vibrato-Attack
--2 -6 0 10 -262144 -1 -1 3175 1;
+-2 -6 0 10 -262144 -1 -1 10160 1;
 #X obj 610 60 nbx 5 14 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack empty
-0 -6 0 10 -262144 -1 -1 0.5 256;
+0 -6 0 10 -262144 -1 -1 1.6 256;
 #X obj 460 90 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin Vibrato-Begin
--2 -6 0 10 -262144 -1 -1 635 1;
+-2 -6 0 10 -262144 -1 -1 12700 1;
 #X obj 610 90 nbx 5 14 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin empty
-0 -6 0 10 -262144 -1 -1 0.1 256;
+0 -6 0 10 -262144 -1 -1 2 256;
 #X obj 460 120 hsl 128 15 1 15 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq Vibrato-Freq
--2 -6 0 10 -262144 -1 -1 3629 1;
+-2 -6 0 10 -262144 -1 -1 0 1;
 #X obj 610 120 nbx 5 14 1 15 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq empty
-0 -6 0 10 -262144 -1 -1 5 256;
+0 -6 0 10 -262144 -1 -1 1 256;
 #X obj 460 150 hsl 128 15 0 1 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain Vibrato-Gain
--2 -6 0 10 -262144 -1 -1 0 1;
+-2 -6 0 10 -262144 -1 -1 292 1;
 #X obj 610 150 nbx 5 14 0 1 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain empty
-0 -6 0 10 -262144 -1 -1 0 256;
+0 -6 0 10 -262144 -1 -1 0.023 256;
 #X obj 460 180 hsl 128 15 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
-Vibrato-Release -2 -6 0 10 -262144 -1 -1 1270 1;
+Vibrato-Release -2 -6 0 10 -262144 -1 -1 4769 1;
 #X obj 610 180 nbx 5 14 0 2 0 0 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
 \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
-empty 0 -6 0 10 -262144 -1 -1 0.2 256;
+empty 0 -6 0 10 -262144 -1 -1 0.751 256;
 #X obj 10 210 hsl 128 15 20 1000 0 0 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequ
 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequ
 Modulation-Frequency -2 -6 0 10 -262144 -1 -1 0 1;
@@ -88,10 +88,10 @@ empty 0 -6 0 10 -262144 -1 -1 20 256;
 Modulation-Type 0 -6 0 10 -262144 -1 -1 0 256;
 #X obj 10 270 hsl 128 15 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
-Nonlinearity -2 -6 0 10 -262144 -1 -1 0 1;
+Nonlinearity -2 -6 0 10 -262144 -1 -1 889 1;
 #X obj 160 270 nbx 5 14 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
-empty 0 -6 0 10 -262144 -1 -1 0 256;
+empty 0 -6 0 10 -262144 -1 -1 0.07 256;
 #X obj 10 300 hsl 128 15 0 2 0 0 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity-Att
 \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity-Att
 Nonlinearity-Attack -2 -6 0 10 -262144 -1 -1 0 1;
@@ -100,32 +100,32 @@ Nonlinearity-Attack -2 -6 0 10 -262144 -1 -1 0 1;
 empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X obj 235 210 hsl 128 15 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
-Noise-Gain -2 -6 0 10 -262144 -1 -1 12700 1;
+Noise-Gain -2 -6 0 10 -262144 -1 -1 978 1;
 #X obj 385 210 nbx 5 14 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
-empty 0 -6 0 10 -262144 -1 -1 1 256;
+empty 0 -6 0 10 -262144 -1 -1 0.077 256;
 #X obj 235 240 hsl 128 15 0 1.5 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure Pressure
--2 -6 0 10 -262144 -1 -1 6350 1;
+-2 -6 0 10 -262144 -1 -1 6240 1;
 #X obj 385 240 nbx 5 14 0 1.5 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure empty
-0 -6 0 10 -262144 -1 -1 0.75 256;
+0 -6 0 10 -262144 -1 -1 0.737 256;
 #X obj 10 330 hsl 128 15 0 1 0 0 \$0-Flute/Reverb/reverbGain \$0-Flute/Reverb/reverbGain
-reverbGain -2 -6 0 10 -262144 -1 -1 1740 1;
+reverbGain -2 -6 0 10 -262144 -1 -1 1892 1;
 #X obj 160 330 nbx 5 14 0 1 0 0 \$0-Flute/Reverb/reverbGain \$0-Flute/Reverb/reverbGain
-empty 0 -6 0 10 -262144 -1 -1 0.137 256;
+empty 0 -6 0 10 -262144 -1 -1 0.149 256;
 #X obj 10 360 hsl 128 15 0.01 2 0 0 \$0-Flute/Reverb/roomSize \$0-Flute/Reverb/roomSize
-roomSize -2 -6 0 10 -262144 -1 -1 4531 1;
+roomSize -2 -6 0 10 -262144 -1 -1 8928 1;
 #X obj 160 360 nbx 5 14 0.01 2 0 0 \$0-Flute/Reverb/roomSize \$0-Flute/Reverb/roomSize
-empty 0 -6 0 10 -262144 -1 -1 0.72 256;
+empty 0 -6 0 10 -262144 -1 -1 1.409 256;
 #X obj 10 390 hsl 128 15 0 1 0 0 \$0-Flute/Spat/pan-angle \$0-Flute/Spat/pan-angle
-pan-angle -2 -6 0 10 -262144 -1 -1 7620 1;
+pan-angle -2 -6 0 10 -262144 -1 -1 597 1;
 #X obj 160 390 nbx 5 14 0 1 0 0 \$0-Flute/Spat/pan-angle \$0-Flute/Spat/pan-angle
-empty 0 -6 0 10 -262144 -1 -1 0.6 256;
+empty 0 -6 0 10 -262144 -1 -1 0.047 256;
 #X obj 10 420 hsl 128 15 0 1 0 0 \$0-Flute/Spat/spatial-width \$0-Flute/Spat/spatial-width
-spatial-width -2 -6 0 10 -262144 -1 -1 6350 1;
+spatial-width -2 -6 0 10 -262144 -1 -1 8941 1;
 #X obj 160 420 nbx 5 14 0 1 0 0 \$0-Flute/Spat/spatial-width \$0-Flute/Spat/spatial-width
-empty 0 -6 0 10 -262144 -1 -1 0.5 256;
+empty 0 -6 0 10 -262144 -1 -1 0.704 256;
 #X obj 647 3 bng 15 250 50 1 \$0-init \$0-ignore empty 0 -6 0 10 -262144
 -1 -1;
 #X obj 667 3 tgl 15 1 \$0-active \$0-active empty 0 -6 0 10 -262144
@@ -173,8 +173,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 1832 386 s \$0-Flute/Envelopes-and-Vibrato/Global-Envelope-Parameters/Glob-Env-Release
 ;
-#X msg 715 270 0.05;
-#X obj 810 309 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
+#X obj 815 302 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
 ;
 #X obj 1419 270 r \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
 ;
@@ -185,7 +184,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 #X obj 2123 290 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Attack
 ;
 #X msg 715 310 0.2;
-#X obj 778 347 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
+#X obj 787 340 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
 ;
 #X obj 1419 310 r \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
 ;
@@ -196,7 +195,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 #X obj 2123 330 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Decay
 ;
 #X msg 715 350 1;
-#X obj 761 389 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Release
+#X obj 796 376 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Release
 ;
 #X obj 1419 350 r \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Release
 ;
@@ -206,7 +205,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 370 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Press-Env-Release
 ;
-#X obj 773 440 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Pressure-Env
+#X obj 847 416 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Pressure-Env
 ;
 #X obj 1419 390 r \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Pressure-Env
 ;
@@ -216,8 +215,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 410 s \$0-Flute/Envelopes-and-Vibrato/Pressure-Envelope-Parameters/Pressure-Env
 ;
-#X msg 715 430 0.5;
-#X obj 715 450 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
+#X obj 742 450 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
 ;
 #X obj 1419 430 r \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
 ;
@@ -227,8 +225,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 450 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Attack
 ;
-#X msg 715 470 0.1;
-#X obj 715 490 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
+#X obj 784 483 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
 ;
 #X obj 1419 470 r \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
 ;
@@ -238,8 +235,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 490 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Begin
 ;
-#X msg 715 510 5;
-#X obj 790 514 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
+#X obj 776 524 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
 ;
 #X obj 1419 510 r \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
 ;
@@ -249,7 +245,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 530 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Freq
 ;
-#X obj 755 576 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
+#X obj 768 564 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
 ;
 #X obj 1426 537 r \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
 ;
@@ -259,8 +255,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 570 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Gain
 ;
-#X msg 715 590 0.2;
-#X obj 715 610 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
+#X obj 758 612 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
 ;
 #X obj 1419 590 r \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
 ;
@@ -271,7 +266,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 #X obj 2123 610 s \$0-Flute/Envelopes-and-Vibrato/Vibrato-Parameters/Vibrato-Release
 ;
 #X msg 715 630 220;
-#X obj 715 650 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequency
+#X obj 768 651 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequency
 ;
 #X obj 1419 630 r \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequency
 ;
@@ -282,7 +277,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 #X obj 2123 650 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Frequency
 ;
 #X msg 715 670 0;
-#X obj 715 690 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Type
+#X obj 759 688 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Type
 ;
 #X obj 1419 670 r \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Type
 ;
@@ -292,8 +287,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 690 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Modulation-Type
 ;
-#X msg 715 710 0;
-#X obj 715 730 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
+#X obj 756 732 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
 ;
 #X obj 1419 710 r \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
 ;
@@ -303,8 +297,7 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 730 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity
 ;
-#X msg 715 750 0.1;
-#X obj 941 747 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity-Attack
+#X obj 956 756 s \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity-Attack
 ;
 #X obj 1419 750 r \$0-Flute/Physical-and-Nonlinearity/Nonlinear-Filter-Parameters/Nonlinearity-Attack
 ;
@@ -334,25 +327,21 @@ empty 0 -6 0 10 -262144 -1 -1 0.5 256;
 ;
 #X obj 2123 850 s \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure
 ;
-#X msg 715 870 0.137;
 #X obj 715 890 s \$0-Flute/Reverb/reverbGain;
 #X obj 1419 870 r \$0-Flute/Reverb/reverbGain;
 #X msg 1419 890 /Flute/Reverb/reverbGain \$1;
 #X obj 2123 870 route /Flute/Reverb/reverbGain;
 #X obj 2123 890 s \$0-Flute/Reverb/reverbGain;
-#X msg 715 910 0.72;
 #X obj 715 930 s \$0-Flute/Reverb/roomSize;
 #X obj 1419 910 r \$0-Flute/Reverb/roomSize;
 #X msg 1419 930 /Flute/Reverb/roomSize \$1;
 #X obj 2123 910 route /Flute/Reverb/roomSize;
 #X obj 2123 930 s \$0-Flute/Reverb/roomSize;
-#X msg 715 950 0.6;
 #X obj 715 970 s \$0-Flute/Spat/pan-angle;
 #X obj 1419 950 r \$0-Flute/Spat/pan-angle;
 #X msg 1419 970 /Flute/Spat/pan-angle \$1;
 #X obj 2123 950 route /Flute/Spat/pan-angle;
 #X obj 2123 970 s \$0-Flute/Spat/pan-angle;
-#X msg 715 990 0.5;
 #X obj 715 1010 s \$0-Flute/Spat/spatial-width;
 #X obj 1419 990 r \$0-Flute/Spat/spatial-width;
 #X msg 1419 1010 /Flute/Spat/spatial-width \$1;
@@ -368,11 +357,22 @@ gate 17 7 0 10 -262144 -1 -1 0 1;
 #X msg 1175 142 /Flute/Basic-Parameters/gate \$1;
 #X obj 1177 95 r \$0-Flute/Basic-Parameters/gate;
 #X msg 715 390 1;
-#X msg 715 790 1;
-#X msg 715 550 0;
-#X msg 715 190 0;
 #X msg 715 230 2;
-#X msg 715 830 0.75;
+#X msg 713 870 0.149;
+#X msg 693 908 1.409;
+#X msg 715 950 0.047;
+#X msg 715 990 0.704;
+#X msg 715 710 0.07;
+#X msg 715 750 0.314;
+#X msg 715 270 0.9;
+#X msg 715 430 1.6;
+#X msg 715 550 0.023;
+#X msg 715 590 0.751;
+#X msg 715 470 2;
+#X msg 715 510 1;
+#X msg 715 830 0.737;
+#X msg 715 190 1;
+#X msg 715 790 0.077;
 #X connect 0 0 2 0;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
@@ -383,28 +383,28 @@ gate 17 7 0 10 -262144 -1 -1 0 1;
 #X connect 5 2 8 0;
 #X connect 54 0 64 0;
 #X connect 54 0 70 0;
-#X connect 54 0 201 0;
-#X connect 54 0 207 0;
+#X connect 54 0 190 0;
 #X connect 54 0 208 0;
-#X connect 54 0 87 0;
-#X connect 54 0 93 0;
-#X connect 54 0 99 0;
-#X connect 54 0 204 0;
-#X connect 54 0 110 0;
-#X connect 54 0 116 0;
-#X connect 54 0 122 0;
-#X connect 54 0 206 0;
-#X connect 54 0 133 0;
-#X connect 54 0 139 0;
-#X connect 54 0 145 0;
-#X connect 54 0 151 0;
-#X connect 54 0 157 0;
+#X connect 54 0 194 0;
+#X connect 54 0 201 0;
+#X connect 54 0 92 0;
+#X connect 54 0 98 0;
+#X connect 54 0 193 0;
+#X connect 54 0 202 0;
 #X connect 54 0 205 0;
+#X connect 54 0 206 0;
+#X connect 54 0 203 0;
+#X connect 54 0 204 0;
+#X connect 54 0 134 0;
+#X connect 54 0 140 0;
+#X connect 54 0 199 0;
+#X connect 54 0 200 0;
 #X connect 54 0 209 0;
-#X connect 54 0 173 0;
-#X connect 54 0 179 0;
-#X connect 54 0 185 0;
-#X connect 54 0 191 0;
+#X connect 54 0 207 0;
+#X connect 54 0 195 0;
+#X connect 54 0 196 0;
+#X connect 54 0 197 0;
+#X connect 54 0 198 0;
 #X connect 57 0 62 0;
 #X connect 58 0 59 0;
 #X connect 60 0 61 0;
@@ -421,7 +421,7 @@ gate 17 7 0 10 -262144 -1 -1 0 1;
 #X connect 73 0 55 0;
 #X connect 74 0 75 0;
 #X connect 74 1 76 0;
-#X connect 76 0 198 0;
+#X connect 76 0 187 0;
 #X connect 76 1 80 0;
 #X connect 78 0 79 0;
 #X connect 79 0 55 0;
@@ -430,104 +430,104 @@ gate 17 7 0 10 -262144 -1 -1 0 1;
 #X connect 83 0 84 0;
 #X connect 84 0 55 0;
 #X connect 85 0 86 0;
-#X connect 85 1 91 0;
-#X connect 87 0 88 0;
-#X connect 89 0 90 0;
-#X connect 90 0 55 0;
-#X connect 91 0 92 0;
-#X connect 91 1 97 0;
-#X connect 93 0 94 0;
-#X connect 95 0 96 0;
-#X connect 96 0 55 0;
-#X connect 97 0 98 0;
-#X connect 97 1 103 0;
-#X connect 99 0 100 0;
-#X connect 101 0 102 0;
-#X connect 102 0 55 0;
-#X connect 103 0 104 0;
-#X connect 103 1 108 0;
-#X connect 106 0 107 0;
-#X connect 107 0 55 0;
-#X connect 108 0 109 0;
-#X connect 108 1 114 0;
+#X connect 85 1 90 0;
+#X connect 88 0 89 0;
+#X connect 89 0 55 0;
+#X connect 90 0 91 0;
+#X connect 90 1 96 0;
+#X connect 92 0 93 0;
+#X connect 94 0 95 0;
+#X connect 95 0 55 0;
+#X connect 96 0 97 0;
+#X connect 96 1 102 0;
+#X connect 98 0 99 0;
+#X connect 100 0 101 0;
+#X connect 101 0 55 0;
+#X connect 102 0 103 0;
+#X connect 102 1 107 0;
+#X connect 105 0 106 0;
+#X connect 106 0 55 0;
+#X connect 107 0 108 0;
+#X connect 107 1 112 0;
 #X connect 110 0 111 0;
+#X connect 111 0 55 0;
 #X connect 112 0 113 0;
-#X connect 113 0 55 0;
-#X connect 114 0 115 0;
-#X connect 114 1 120 0;
-#X connect 116 0 117 0;
-#X connect 118 0 119 0;
-#X connect 119 0 55 0;
+#X connect 112 1 117 0;
+#X connect 115 0 116 0;
+#X connect 116 0 55 0;
+#X connect 117 0 118 0;
+#X connect 117 1 122 0;
 #X connect 120 0 121 0;
-#X connect 120 1 126 0;
+#X connect 121 0 55 0;
 #X connect 122 0 123 0;
-#X connect 124 0 125 0;
-#X connect 125 0 55 0;
-#X connect 126 0 127 0;
-#X connect 126 1 131 0;
-#X connect 129 0 130 0;
-#X connect 130 0 55 0;
-#X connect 131 0 132 0;
-#X connect 131 1 137 0;
-#X connect 133 0 134 0;
-#X connect 135 0 136 0;
-#X connect 136 0 55 0;
-#X connect 137 0 138 0;
-#X connect 137 1 143 0;
-#X connect 139 0 140 0;
-#X connect 141 0 142 0;
-#X connect 142 0 55 0;
-#X connect 143 0 144 0;
-#X connect 143 1 149 0;
-#X connect 145 0 146 0;
+#X connect 122 1 127 0;
+#X connect 125 0 126 0;
+#X connect 126 0 55 0;
+#X connect 127 0 128 0;
+#X connect 127 1 132 0;
+#X connect 130 0 131 0;
+#X connect 131 0 55 0;
+#X connect 132 0 133 0;
+#X connect 132 1 138 0;
+#X connect 134 0 135 0;
+#X connect 136 0 137 0;
+#X connect 137 0 55 0;
+#X connect 138 0 139 0;
+#X connect 138 1 144 0;
+#X connect 140 0 141 0;
+#X connect 142 0 143 0;
+#X connect 143 0 55 0;
+#X connect 144 0 145 0;
+#X connect 144 1 149 0;
 #X connect 147 0 148 0;
 #X connect 148 0 55 0;
 #X connect 149 0 150 0;
-#X connect 149 1 155 0;
-#X connect 151 0 152 0;
-#X connect 153 0 154 0;
-#X connect 154 0 55 0;
-#X connect 155 0 156 0;
-#X connect 155 1 161 0;
+#X connect 149 1 154 0;
+#X connect 152 0 153 0;
+#X connect 153 0 55 0;
+#X connect 154 0 155 0;
+#X connect 154 1 159 0;
 #X connect 157 0 158 0;
+#X connect 158 0 55 0;
 #X connect 159 0 160 0;
-#X connect 160 0 55 0;
-#X connect 161 0 162 0;
-#X connect 161 1 166 0;
+#X connect 159 1 164 0;
+#X connect 162 0 163 0;
+#X connect 163 0 55 0;
 #X connect 164 0 165 0;
-#X connect 165 0 55 0;
-#X connect 166 0 167 0;
-#X connect 166 1 171 0;
+#X connect 164 1 169 0;
+#X connect 167 0 168 0;
+#X connect 168 0 55 0;
 #X connect 169 0 170 0;
-#X connect 170 0 55 0;
-#X connect 171 0 172 0;
-#X connect 171 1 177 0;
-#X connect 173 0 174 0;
-#X connect 175 0 176 0;
-#X connect 176 0 55 0;
+#X connect 169 1 174 0;
+#X connect 172 0 173 0;
+#X connect 173 0 55 0;
+#X connect 174 0 175 0;
+#X connect 174 1 179 0;
 #X connect 177 0 178 0;
-#X connect 177 1 183 0;
+#X connect 178 0 55 0;
 #X connect 179 0 180 0;
-#X connect 181 0 182 0;
-#X connect 182 0 55 0;
-#X connect 183 0 184 0;
-#X connect 183 1 189 0;
-#X connect 185 0 186 0;
-#X connect 187 0 188 0;
-#X connect 188 0 55 0;
-#X connect 189 0 190 0;
-#X connect 189 1 195 0;
-#X connect 191 0 192 0;
-#X connect 193 0 194 0;
-#X connect 194 0 55 0;
-#X connect 195 0 196 0;
-#X connect 201 0 200 0;
-#X connect 202 0 55 0;
-#X connect 203 0 202 0;
-#X connect 204 0 105 0;
-#X connect 205 0 163 0;
-#X connect 206 0 128 0;
-#X connect 207 0 77 0;
-#X connect 208 0 82 0;
-#X connect 209 0 168 0;
+#X connect 179 1 184 0;
+#X connect 182 0 183 0;
+#X connect 183 0 55 0;
+#X connect 184 0 185 0;
+#X connect 190 0 189 0;
+#X connect 191 0 55 0;
+#X connect 192 0 191 0;
+#X connect 193 0 104 0;
+#X connect 194 0 82 0;
+#X connect 195 0 166 0;
+#X connect 196 0 171 0;
+#X connect 197 0 176 0;
+#X connect 198 0 181 0;
+#X connect 199 0 146 0;
+#X connect 200 0 151 0;
+#X connect 201 0 87 0;
+#X connect 202 0 109 0;
+#X connect 203 0 124 0;
+#X connect 204 0 129 0;
+#X connect 205 0 114 0;
+#X connect 206 0 119 0;
+#X connect 207 0 161 0;
+#X connect 208 0 77 0;
+#X connect 209 0 156 0;
 #X coords 0 -1 1 1 685 440 1 0 0;

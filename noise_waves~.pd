@@ -1,0 +1,23 @@
+#N canvas 926 205 482 675 10;
+#X obj 33 328 noise~;
+#X obj 44 380 vcf~ 1;
+#X obj 44 437 outlet~;
+#X obj 44 404 *~ 0.5;
+#X obj 97 357 *~ 3;
+#X obj 225 320 snapshot~;
+#X obj 225 294 metro 10;
+#X obj 234 251 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 97 306 phasor~ 1.2;
+#X obj 97 236 phasor~ 0.1;
+#X obj 97 275 +~ 1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 1;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X connect 9 0 5 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
