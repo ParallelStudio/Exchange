@@ -31,16 +31,14 @@ void loop() {
     if (pinStates[thisPin] != tripped) {
       pinLastDebounce[thisPin] = millis();
       pinStates[thisPin] = tripped;
-      Serial.println("debouncing");
+//      Serial.println("debouncing");
     }
-    if ((millis() - pinLastDebounce[thisPin]) > debounceDelay){
-      if (noteStates[thisPin] != pinStates[thisPin]) {
-        usbMIDI.sendNoteOn(thisPin, pinStates[thisPin] ? 127 : 0, 1);
-        Serial.print(pinStates[thisPin] ? "on " : "off ");
-        Serial.print(sensorPins [thisPin]);
-        Serial.print('\n'); 
-        noteStates[thisPin] = pinStates[thisPin];
-      }
+    else if (noteStates[thisPin] != pinStates[thisPin] && (millis() - pinLastDebounce[thisPin]) > debounceDelay) {
+      usbMIDI.sendNoteOn(thisPin, pinStates[thisPin] ? 127 : 0, 1);
+      Serial.print(pinStates[thisPin] ? "on " : "off ");
+      Serial.print(sensorPins [thisPin]);
+      Serial.print('\n'); 
+      noteStates[thisPin] = pinStates[thisPin];
     }
 //      Serial.print(pulseIn(sensorPins[thisPin], HIGH)/147);
 //      Serial.print("in, ");
