@@ -1,4 +1,4 @@
-#N canvas 923 59 757 485 10;
+#N canvas 704 86 961 504 10;
 #X obj 110 98 noise~;
 #X obj 110 146 *~;
 #X obj 166 29 t b b;
@@ -66,12 +66,10 @@
 #X connect 28 0 9 0;
 #X connect 29 1 15 0;
 #X connect 29 2 16 0;
-#X connect 29 3 14 0;
 #X connect 29 4 17 0;
 #X connect 29 5 18 0;
 #X connect 29 7 19 0;
 #X connect 29 8 20 0;
-#X connect 29 9 21 0;
 #X connect 29 10 22 0;
 #X connect 29 11 23 0;
 #X connect 29 13 24 0;
