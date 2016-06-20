@@ -1,4 +1,4 @@
-#N canvas 921 38 557 602 10;
+#N canvas 1129 307 557 602 10;
 #N canvas 715 226 450 300 body 0;
 #X obj 150 39 inlet~;
 #X obj 162 212 outlet~;
@@ -19,11 +19,11 @@
 #X connect 7 0 4 1;
 #X restore 200 352 pd body filter;
 #X obj 225 150 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10000 1;
+-1 -1 9400 1;
 #X obj 259 151 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5700 1;
+-1 -1 7100 1;
 #X obj 293 151 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4500 1;
+-1 -1 9500 1;
 #X obj 225 291 mtof;
 #X obj 259 291 mtof;
 #X obj 292 291 mtof;
@@ -38,13 +38,14 @@
 #X obj 341 91 route 8;
 #X obj 273 -38 loadbang;
 #X msg 266 3 100;
-#X obj 203 401 outlet~;
+#X obj 203 457 outlet~;
 #X obj 80 57 inlet;
 #X floatatom 358 283 5 0 0 0 - - -, f 5;
 #X floatatom 183 284 5 0 0 0 - - -, f 5;
 #X floatatom 124 285 5 0 0 0 - - -, f 5;
 #X msg 301 2 57;
 #X msg 333 0 45;
+#X obj 174 55 inlet;
 #X obj 80 100 clone 18 steampipe;
 #X connect 0 0 18 0;
 #X connect 1 0 4 0;
@@ -69,7 +70,8 @@
 #X connect 16 0 23 0;
 #X connect 16 0 24 0;
 #X connect 17 0 1 0;
-#X connect 19 0 25 0;
+#X connect 19 0 26 0;
 #X connect 23 0 2 0;
 #X connect 24 0 3 0;
-#X connect 25 0 0 0;
+#X connect 25 0 26 1;
+#X connect 26 0 0 0;
