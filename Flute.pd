@@ -100,16 +100,16 @@ Nonlinearity-Attack -2 -6 0 10 -262144 -1 -1 0 1;
 empty 0 -6 0 10 -262144 -1 -1 0 256;
 #X obj 235 210 hsl 128 15 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
-Noise-Gain -2 -6 0 10 -262144 -1 -1 4800 1;
+Noise-Gain -2 -6 0 10 -262144 -1 -1 5188 1;
 #X obj 385 210 nbx 5 14 0 1 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Noise-Gain
-empty 0 -6 0 10 -262144 -1 -1 0.377953 256;
+empty 0 -6 0 10 -262144 -1 -1 0.408504 256;
 #X obj 235 240 hsl 128 15 0 1.5 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure Pressure
--2 -6 0 10 -262144 -1 -1 6140 1;
+-2 -6 0 10 -262144 -1 -1 6338 1;
 #X obj 385 240 nbx 5 14 0 1.5 0 0 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure
 \$0-Flute/Physical-and-Nonlinearity/Physical-Parameters/Pressure empty
-0 -6 0 10 -262144 -1 -1 0.725197 256;
+0 -6 0 10 -262144 -1 -1 0.748583 256;
 #X obj 10 330 hsl 128 15 0 1 0 0 \$0-Flute/Reverb/reverbGain \$0-Flute/Reverb/reverbGain
 reverbGain -2 -6 0 10 -262144 -1 -1 1892 1;
 #X obj 160 330 nbx 5 14 0 1 0 0 \$0-Flute/Reverb/reverbGain \$0-Flute/Reverb/reverbGain
@@ -372,7 +372,7 @@ gate 17 7 0 10 -262144 -1 -1 0 1;
 #X msg 715 510 1;
 #X msg 715 190 1;
 #X msg 715 790 0.377;
-#X msg 715 830 0.725;
+#X msg 715 830 0.748;
 #X connect 0 0 2 0;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
