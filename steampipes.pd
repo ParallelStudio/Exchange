@@ -1,11 +1,11 @@
-#N canvas 769 52 398 338 10;
+#N canvas 603 38 843 723 10;
 #X obj 42 23 r midi;
 #X obj 98 23 r sustain;
-#X msg 41 251 \; pd dsp 1;
-#X obj 41 220 loadbang;
+#X msg 18 237 \; pd dsp 1;
+#X obj 18 206 loadbang;
 #X obj 168 20 r lfos;
-#X obj 78 146 dac~ 1 2 3 4 5 6 7 8 9;
-#X obj 88 96 clone 18 steampipe;
+#X obj 255 165 dac~ 1 2 3 4 5 6 7 8 9;
+#X obj 271 65 clone 18 steampipe;
 #X connect 0 0 6 0;
 #X connect 1 0 6 1;
 #X connect 3 0 2 0;
