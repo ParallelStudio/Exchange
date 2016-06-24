@@ -1,0 +1,18 @@
+#N canvas 415 84 890 518 10;
+#X msg 184 236 print;
+#X obj 231 306 *~;
+#X obj 262 253 limiter~ 50 1;
+#X obj 168 328 env~;
+#X floatatom 168 346 4 0 0 0 - - -, f 4;
+#X obj 231 286 z~ 64;
+#X text 318 287 just a small delay of 64 samples;
+#X obj 262 208 inlet~;
+#X obj 244 369 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 1 0 8 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 5 0 1 0;
+#X connect 7 0 2 0;
+#X connect 7 0 5 0;

@@ -1,4 +1,4 @@
-#N canvas 603 38 843 723 10;
+#N canvas 691 255 843 723 10;
 #X obj 42 23 r midi;
 #X obj 98 23 r sustain;
 #X msg 18 237 \; pd dsp 1;
