@@ -1,4 +1,4 @@
-#N canvas 194 47 1411 690 10;
+#N canvas 82 425 1411 690 10;
 #X obj 407 -1 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 11430 1;
 #X text 432 30 string excitation;
@@ -29,6 +29,11 @@
 #X obj 379 342 instance_audio_switcher;
 #X obj 375 317 *~ 1;
 #X obj 327 316 *~ 0.3;
+#X obj 639 276 f \$1;
+#X obj 639 301 sel 8;
+#X msg 664 328 0.7;
+#X msg 634 328 0.2;
+#X obj 626 251 loadbang;
 #X connect 0 0 13 0;
 #X connect 0 0 21 2;
 #X connect 2 0 3 0;
@@ -55,3 +60,9 @@
 #X connect 24 0 23 0;
 #X connect 26 0 25 0;
 #X connect 27 0 25 0;
+#X connect 28 0 29 0;
+#X connect 29 0 31 0;
+#X connect 29 0 30 0;
+#X connect 30 0 26 1;
+#X connect 31 0 27 1;
+#X connect 32 0 28 0;

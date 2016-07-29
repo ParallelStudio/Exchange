@@ -10,8 +10,8 @@ int sensorPins[] = {
 bool pinStates[pinCount];
 bool noteStates[pinCount];
 unsigned long pinLastDebounce[pinCount];
-unsigned long debounceDelay = 200;
-int targetRange = 36;
+unsigned long debounceDelay = 100;
+int targetRange = 128;
 // Define the number of samples to keep track of.  The higher the number,
 // the more the readings will be smoothed, but the slower the output will
 // respond to the input.  Using a constant rather than a normal variable lets
