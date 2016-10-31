@@ -5,5 +5,7 @@
 #X obj 181 -15 inlet;
 #X obj 174 20 s ctlin;
 #X obj 137 160 clone 18 karplus_strong_clone;
+#X obj 150 241 outlet~;
 #X connect 1 0 2 0;
 #X connect 3 0 4 0;
+#X connect 5 1 6 0;
